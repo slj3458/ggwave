@@ -8,7 +8,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -32,7 +32,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -61,7 +61,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -94,7 +94,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -121,16 +121,16 @@ jobs:
             fail-fast: false
             matrix:
                 build: [Release]
-                python-version: [3.8.18, 3.9.20, 3.11.11, 3.12.9]
+                python-version: [3.9.21, 3.10.16, 3.11.11, 3.12.8, 3.13.1]
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
             - name: Set up Python ${{ matrix.python-version }}
-              uses: actions/setup-python@v2
+              uses: actions/setup-python@v5
               with:
                   python-version: ${{ matrix.python-version }}
 
@@ -160,7 +160,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -187,7 +187,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -215,7 +215,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -241,7 +241,7 @@ jobs:
 
         steps:
             - name: Clone
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
               with:
                   submodules: recursive
 
@@ -274,7 +274,7 @@ jobs:
               build: [Release]
       steps:
         - name: Clone
-          uses: actions/checkout@v1
+          uses: actions/checkout@v4
           with:
             submodules: recursive
 
