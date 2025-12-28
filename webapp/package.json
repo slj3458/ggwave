@@ -1,0 +1,23 @@
+{
+  "name": "ggwave-webapp",
+  "version": "1.0.0",
+  "description": "GGWave Web Application - Audio data transmission",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "open index.html",
+    "dev": "http-server -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ggwave",
+    "audio",
+    "transmission",
+    "web",
+    "communication"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

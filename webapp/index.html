@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGWave - Audio Data Transmission</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GGWave</h1>
+            <p class="subtitle">Audio-based Data Transmission</p>
+        </header>
+
+        <main>
+            <div class="sections">
+                <!-- Transmitter Section -->
+                <section class="section transmitter-section">
+                    <h2>Transmitter</h2>
+                    <div class="content">
+                        <div class="form-group">
+                            <label for="message-input">Message to Transmit:</label>
+                            <textarea id="message-input" placeholder="Enter text to transmit..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="protocol-select">Protocol:</label>
+                            <select id="protocol-select">
+                                <option value="ggwave">GGWave</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+                        <button id="transmit-btn" class="btn btn-primary">Transmit</button>
+                        <div id="transmitter-status" class="status-message"></div>
+                    </div>
+                </section>
+
+                <!-- Receiver Section -->
+                <section class="section receiver-section">
+                    <h2>Receiver</h2>
+                    <div class="content">
+                        <button id="listen-btn" class="btn btn-primary">Start Listening</button>
+                        <button id="stop-listen-btn" class="btn btn-secondary" disabled>Stop Listening</button>
+                        <div id="receiver-status" class="status-message"></div>
+                        <div class="received-data">
+                            <h3>Received Messages:</h3>
+                            <div id="received-messages" class="messages-list"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Visualization Section -->
+            <section class="section visualization-section">
+                <h2>Audio Visualization</h2>
+                <div class="content">
+                    <canvas id="waveform-canvas" width="800" height="200"></canvas>
+                    <div class="visualization-controls">
+                        <button id="clear-canvas-btn" class="btn btn-secondary">Clear Canvas</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 GGWave Project. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/transmitter.js"></script>
+    <script src="js/receiver.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
